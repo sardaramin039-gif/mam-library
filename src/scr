@@ -1,0 +1,5 @@
+src/app.component.ts
+src/app.component.html
+src/services/gemini.service.ts
+src/services/writing-engineer.service.ts
+src/services/library-archive.service.ts

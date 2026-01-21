@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>کتێبخانەی مام | Harvard Branch</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Inter:wght@300;400;600&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind (Via CDN for simplicity) -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  
+  <!-- External Libs -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    @font-face {
+      font-family: 'Unikurd Web';
+      src: local('Unikurd Web'), local('UnikurdWeb'), url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff2') format('woff2'); 
+    }
+    :root {
+      --harvard-crimson: #A51C30;
+      --harvard-black: #1A1A1A;
+      --font-serif: 'Merriweather', 'Unikurd Web', 'Noto Naskh Arabic', serif;
+      --font-sans: 'Inter', 'Unikurd Web', 'Noto Naskh Arabic', sans-serif;
+    }
+    body {
+      font-family: var(--font-sans);
+      background-color: #FFFFFF;
+      color: var(--harvard-black);
+    }
+    .harvard-paper {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        border: 1px solid #e5e5e5;
+    }
+    /* Scrollbars */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #555; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--harvard-crimson); }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if(typeof mermaid !== 'undefined') { mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' }); }
+    });
+  </script>
+</head>
+<body class="h-screen flex flex-col overflow-hidden">
+  <app-root></app-root>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
